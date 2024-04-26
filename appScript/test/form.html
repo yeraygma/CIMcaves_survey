@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Form</title>
+<?!= include('style'); ?>
+</head>
+<body>
+
+  <form id="surveytest">
+
+  <!-- Section 1: Title and Description -->
+  <div>
+    <h1>Cumulative Impact Model for sea caves in the Canary Islands. version H1</h1>
+    <p>Information to fiill on the survey</p>
+        
+        This survey aims to contribute to an investigation to enhance understanding of human impacts on the biological communities of sea caves, using the Canary Islands as a case study. To achieve this, the vulnerability values of this ecosystem to a range of anthropogenic stressors will be assessed. 
+        
+        The information collected here consists of subjective ratings by each respondent on 7 vulnerability criteria for each stressor. While the survey is based on expert judgment, responses should consider the state of the art on each topic queried.
+        
+        The initial web link redirects randomly to one of a set of surveys designed for this purpose, and each respondent can only take the survey once. Prior experience or knowledge of the Canary Islands's marine ecosystems is not essential; in fact, greater diversity in participants' backgrounds is preferred. However, information will be requested regarding participants' familiarity with the biogeographical characteristics of the Canary region.
+        
+        This survey is grounded in the theoretical framework of cumulative impact models first introduced by Benjamin Halpern and collaborators in 2007 and 2008, and subsequently expanded upon by other authors.
+        
+        Criteria and their definitions to be evaluated for each stressor are:</p>
+        
+            Pressure distance. At what distance from the site of the activity will the pressure decrease to an insignificant level?.</p>
+            Frequency. How regular are occurrences of discrete threat events?.</p>
+            Functional impact. The trophic level where impact operates.</p>
+            Resistance. The average tendency to resist changing its “natural” state in response to a threat.</p>
+            Recovery time. Time required for restoration to the natural state once the threat has passed.</p>
+            Certainty. Confidence in results based on personal experience and/or existing empirical studies.</p>
+            Stressor local knowledge. Degree of knowledge about the characteristics and quantification of a given stressor in the Canary Islands.
+        
+        </p>
+    <!-- ... other descriptions ... -->
+  </div>
+
+  <!-- Section 2: Personal Information -->
+  <div>
+    <h2>Personal Information</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="middle-name">Middle Name:</label>
+    <input type="text" id="middle-name" name="middle_name"><br>
+
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    
+
+    <label for="organization">Organization:</label>
+    <input type="text" id="organization" name="organization" required><br>
+
+    <label for="position">Position:</label>
+    <input type="text" id="position" name="position" required><br>
+
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" required><br>
+  </div>
+
+  <!-- Section 3: Type of Organization -->
+  <div>
+    <h2>Type of Organization</h2>
+    <!-- Dropdown for organization type -->
+    <select id="organization-type" name="organization_type">
+      <option value="academic">Academic</option>
+      <option value="institution">Institution</option>
+      <option value="govermentAgency">Government agency</option>
+      <option value="privateCompany">Private company</option>
+      <option value="ngo">NGO</option>
+      <option value="other">Other</option>
+      <!-- ... other options ... -->
+    </select>
+  </div>
+
+  <!-- Section 4: Survey Questions -->
+  <div>
+    <h2>Survey Questions</h2>
+    <!-- Question about Pressure Distance -->
+    <fieldset>
+      <legend>Pressure Distance</legend>
+      <label><input type="radio" name="pressure_distance" value="no_impact"> No impact</label><br>
+      
+      <!-- ... other options ... -->
+    </fieldset>
+
+    <!-- ... Other questions ... -->
+  </div>
+
+  <!-- Section 5: Criteria Evaluation -->
+  <div>
+    <h2>Criteria Evaluation</h2>
+    <!-- Each criteria evaluation input -->
+  </div>
+
+  <!-- Submit button -->
+  <input type="submit" value="Submit Survey">
+</form>
+
+</body>
+
+
+
+<?!= include('script'); ?>
+
+
+</html>

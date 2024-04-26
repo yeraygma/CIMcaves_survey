@@ -1,0 +1,170 @@
+/* Estilos generales y configuraciones predeterminadas */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-image: url('./foto_background/divers_sargos.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white; /* Establece todo el texto en blanco por defecto */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('./foto_background/divers_sargos.JPG');
+    /* Agrega una franja negra transparente en la parte superior de la imagen de fondo */
+}
+
+
+
+/* Encabezados y párrafos */
+h1, h2, h3, p, li {
+    text-align: center;
+    margin: 20px 0;
+   
+}
+
+
+.dataframe.criteria-table {
+    background-color: rgba(255, 255, 255, 0.575); /* Fondo semi-transparente */
+    margin: 20px auto; /* Centra la sección */
+    border-radius: 10px;
+    width: 70%; /* Ancho al 80% del contenedor padre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 2vw; /* Añadido margen izquierdo y derecho */
+    color: black; /* Cambia el color del texto a negro */
+    font-size: 1vw;
+}
+
+h1, h2, h3 {
+    color: #f3f2f0; /* Color verde claro para los enlaces */
+}
+
+
+p {
+    font-size: 1vw;
+    text-align: justify; /* Ajusta los párrafos para que estén justificados */
+    width: 70%; /* Cubre el 80% del ancho de la pantalla */
+    margin: 20px auto; /* Centra el párrafo horizontalmente */
+}
+
+/* Tamaño de fuente relativo al ancho de la ventana */
+h1 {
+    font-size: 2.5vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+li {
+    font-size: 1vw;
+    width: 60%; /* Cubre el 80% del ancho de la pantalla */
+    margin: 20px auto; /* Centra el párrafo horizontalmente */
+}
+
+a {
+    color: #90ee90; /* Color verde claro para los enlaces */
+}
+
+/* Secciones y contenedores de preguntas */
+.section, .survey-questions {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.question-container {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Listas y elementos de lista */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    text-align: left;
+    font-weight: normal; /* Establece el peso de la fuente en normal para que la negrita resalte */
+}
+
+li::before {
+    content: ""; /* Añade contenido antes de cada <li> para la negrita hasta el ':' */
+    font-weight: bold; /* Establece en negrita la fuente del contenido antes del <li> */
+}
+
+/* Botón de envío */
+.submit-button {
+    background-color: #7fa771ed;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1vw;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.submit-button:hover {
+    background-color: #bd7cb5ec;
+}
+
+/* Tabla de criterios */
+.criteria-table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.criteria-table th {
+    text-align: center;
+
+}
+.criteria-table td {
+    text-align: left;
+    padding: 8px;
+}
+
+/* Figcaption y caption */
+figcaption,
+caption {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/* Personalización específica para elementos <li> donde se destaca hasta ':' en negrita */
+li b {
+    font-weight: bold;
+}
+
+/* Botón de inicio de la encuesta */
+button {
+    display: block; /* Hace que el botón sea un bloque para centrarlo fácilmente */
+    margin: 20px auto; /* Centra el botón horizontalmente y añade espacio arriba y abajo */
+    background-color: #90ee90; /* Color de fondo verde claro */
+    color: white; /* Color del texto */
+    border: none; /* No border */
+    padding: 1vw 2vw; /* Padding basado en el ancho de la pantalla */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    transition: background-color 0.3s; /* Suaviza la transición del color de fondo */
+}
+
+button:hover {
+    background-color: #ee82ee; /* Color violeta al pasar el ratón por encima */
+}
