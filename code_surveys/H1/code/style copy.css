@@ -1,0 +1,116 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('./foto_background/a_wollastoni_sargos.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5vw; /* Usa una escala basada en el ancho de la ventana */
+}
+
+h2 {
+    font-size: 1.5vw; /* Usa una escala basada en el ancho de la ventana */
+
+}
+
+h3 {
+    font-size: 1.2vw; /* Usa una escala basada en el ancho de la ventana */
+
+}
+
+.section.personal-info{
+    justify-content: ;
+}
+
+.section, .survey-questions {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    margin: 20px auto; /* Centra la sección */
+    border-radius: 10px;
+    width: 80%; /* Ancho al 80% del contenedor padre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 2vw; /* Añadido margen izquierdo y derecho */
+}
+
+.question-container {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Mismo color de fondo para mantener la consistencia */
+}
+
+.question h4 {
+    font-size: 1.2vw;
+}
+
+.question p {
+    font-style: italic;
+    font-size: 1vw; /* Ajusta el tamaño de la fuente */
+    margin: 5px 0 20px; /* Espaciado alrededor del párrafo de la pregunta */
+}
+
+.answers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los desplegables pasen a la siguiente línea si no hay espacio */
+    /*font-size: 3vw;  /* Tamaño de la letra en función del ancho de la ventana */
+    margin-bottom: 100px; /* Agrega espacio adicional debajo del elemento */
+}
+
+.dropdown-label {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; /* Espacio a la derecha de cada desplegable */
+}
+
+.dropdown-label span {
+    font-size: 0.9vw;
+    margin-bottom: 5px;
+}
+
+.dropdown-label select {
+    width: 12vw; /* Ancho fijo para cada desplegable */
+    padding: 5px;
+    font-size: 0.8vw; /* Tamaño de la fuente de los desplegables */
+    margin-bottom: 10px; /* Espacio después de cada desplegable */
+}
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.info {
+    flex-basis: calc(100% / 4 - 10px); /* Ajusta el ancho para que entren 3 en una fila */
+    margin-bottom: 10px;
+    font-size: 1.5vw; /* Usa una escala basada en el ancho de la ventana */
+}
+
+.submit-button {
+    background-color: #7fa771ed;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1vw;
+    display: block;
+    width: fit-content; /* Hace que el botón se ajuste al contenido */
+    margin: 20px auto; /* Centrado y con espacio arriba y abajo */
+}
+
+.submit-button:hover {
+    background-color: #bd7cb5ec;
+}

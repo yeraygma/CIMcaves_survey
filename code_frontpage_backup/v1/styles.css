@@ -1,0 +1,294 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', sans-serif;
+    background-color: black;
+    color: white;
+    padding-top: 60px; /* Ajuste para mobile-first */
+}
+
+nav {
+    background-color: white;
+    height: 70px;  /* Altura ajustada para no sobredimensionar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97vw;
+    align-items: center;
+    display: flex;
+    padding: 0 20px;  /* Padding ajustado para centrar el contenido */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.menu-button {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    flex-grow: 1; /* Permite que los enlaces ocupen todo el espacio disponible */
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    width: 100%;
+    position: static;
+    justify-content: center;
+    gap: 40px; /* Espacio entre elementos de navegación */
+    margin: 0 auto;
+}
+
+.nav-links a{
+    color: black; /* Texto en color negro */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px;  /* Tamaño de fuente ajustado */
+
+
+}
+
+
+.menu-button:focus + .nav-links,
+.nav-links:focus-within {
+    display: flex; /* Hace visibles los enlaces cuando se activa el botón del menú */
+}
+
+nav img {
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav button {
+    padding: 15px;
+}
+
+.submit-button {
+    background-color: #7fa771ed;
+    color: white;
+    border: none;
+    padding: 8px 15px;  /* Padding reducido */
+    border-radius: 5px;
+    cursor: pointer;
+    height: auto;
+    font-size: 1.1vw;  /* Tamaño de fuente ajustado */
+    text-align: center;
+    margin-left: -50px; /* Mueve el botón 10px hacia la izquierda */
+
+    
+}
+
+.submit-button:hover {
+    background-color: #bd7cb5ec;
+}
+
+
+.content-container, .bibliography-section {
+    width: 70%; /* Establecido para tablet y desktop */
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    color: black;
+    text-align: justify;
+    transform: translateY(-60px); /* Desplaza la imagen 20px hacia arriba */
+}
+
+td{
+    text-align: center;
+}
+
+.dataframe.criteria-table,
+.dataframe.pressures-table {
+    width: 100%;           /* Establece el ancho al 100% del contenedor */
+    margin-top: 50px;      /* Añade un margen superior de 50px */
+    overflow-x: auto;      /* Permite el desplazamiento horizontal si es necesario */
+    border: 1px solid black;  /* Establece un borde sólido, aquí asumo que quieres un borde de 1px de grosor */
+    border-collapse: collapse; /* Colapsa los bordes de las celdas para formar un solo borde continuo */
+}
+
+.dataframe.criteria-table th,
+.dataframe.criteria-table td,
+.dataframe.pressures-table th,
+.dataframe.pressures-table td {
+    border: 1px solid black; /* Asegura que cada celda también tenga un borde, si es necesario */
+    padding: 8px;            /* Añade algo de padding para el texto dentro de las celdas */
+}
+
+
+li a {
+    color: #31a906ed; /* Color de los enlaces */
+}
+
+.nav-links {
+    display: flex; /* Muestra los enlaces en formatos no móviles */
+    flex-direction: row; /* Cambio para alinear horizontalmente */
+    position: static; /* Restablece la posición estándar */
+    background: transparent; /* Fondo transparente en no móviles */
+    box-shadow: none; /* Sin sombra en no móviles */
+    width: 100%; /* Ancho auto para contener los elementos justamente */
+    margin: 0 auto; /* Centrado dentro de la barra de navegación */
+ 
+}
+
+.submit-button {
+    margin-left: auto; /* Empujar el botón hacia la izquierda más efectivamente */
+}
+.home-section {
+    position: relative;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+}
+
+.home-image {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    position: relative; /* Añade posición relativa para que el desplazamiento se aplique correctamente */
+    top: -60px; /* Desplaza la imagen 50px hacia arriba */
+    z-index: 1; /* Valor de z-index menor que el del .main-header */
+
+}
+
+.main-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;  /* Asegura que el texto sea visible sobre la imagen */
+    width: 70%;  /* Ajustado para centrar el texto correctamente */
+    font-size: 2.5vw;
+    z-index: 2; /* Valor de z-index menor que el del .main-header */
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+        margin-left: auto;  /* Coloca el botón a la derecha */
+    }
+
+    .submit-button {
+        order: 1; /* Posiciona el botón de enviar a la derecha */
+        margin-left: auto; /* Empuja el botón hacia la derecha */
+        margin-right: 20px; /* Asegura algo de espacio al lado derecho */
+        font-size: 10px;
+    }
+
+    nav {
+        width: 100vw;  /* Usa 100vw para asegurar que no se salga del viewport */
+        padding: 0 10px;  /* Ajusta el padding para dispositivos móviles si es necesario */
+    }
+
+    .nav-links{
+        display: none;
+        width: 20%; /* Ocupa todo el ancho cuando se muestra */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        background-color: white;
+        width: 20%;
+        padding: 10px 0;
+        font-size: 16px;
+        align-items: center; 
+        justify-content: center;
+        z-index: 101;  /* Asegura que esté por encima de otros elementos */
+
+    }
+    .nav-links a{
+        font-size: 10px;  /* Tamaño de fuente ajustado */
+        width: 100%; /* Hace que cada enlace ocupe el ancho completo del contenedor */
+        text-align: center; /* Centra el texto de cada enlace */
+        padding: 8px 0; /* Agrega un poco de padding vertical para mejor toque */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho externo */
+        display: block; /* Hace que cada enlace se trate como un bloque, ocupando una línea completa */
+    }
+    
+    
+
+    nav img {
+        height: 50px;
+        order: 0; /* Posiciona la imagen a la izquierda */
+        margin-left: 20px; /* Espacio desde el lado izquierdo */
+  
+    }
+
+
+    .menu-button:focus + .nav-links,
+    .nav-links:focus-within {
+        display: flex; /* Muestra los enlaces cuando el menú está activo */
+   
+    }
+
+    
+
+    .content-container{
+        padding: 20;
+        padding-right: -20px; /* Añade un padding de 40 píxeles al lado derecho */
+        background-color: white;
+        width: 90%;
+    }
+
+    .dataframe.criteria-table {
+        width: 100%;
+        margin-top: 50px;
+        overflow-x: auto;
+        border:"1";
+
+    }
+
+    .dataframe.pressures-table{
+        width: 100%;
+        margin-top: 50px;
+        overflow-x: auto;
+        border:"1";
+    }
+
+    .home-section {
+        position: relative;
+        text-align: center;
+        background-color: black;
+        color: white;
+        margin: 0 auto;
+    }
+
+    .main-header {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        color: white;  /* Asegura que el texto sea visible sobre la imagen */
+        width: 100%;  /* Ajustado para centrar el texto correctamente */
+        align-items: center; 
+        z-index: 2; /* Valor de z-index menor que el del .main-header */
+    }
+
+    .home-image {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        position: relative; /* Añade posición relativa para que el desplazamiento se aplique correctamente */
+        top: -60px; /* Desplaza la imagen 50px hacia arriba */
+        z-index: 1; /* Valor de z-index menor que el del .main-header */
+    
+    }
+
+    /* Contenedor específico para .criteria-table que permite desplazamiento horizontal */
+    .criteria-table-container {
+    overflow-x: auto;        /* Permite el desplazamiento horizontal si el contenido excede el ancho de la pantalla */
+    }
+
+    /* Ajustes para .pressures-table si también se requiere desplazamiento horizontal */
+    .pressures-table-container {
+    overflow-x: auto;        /* Permite el desplazamiento horizontal, opcional para .pressures-table */
+    }
+   
+
+
+}
+
+

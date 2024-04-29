@@ -1,0 +1,135 @@
+/* Estilos base para móviles */
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('./foto_background/divers_sargos.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white; /* Todo el texto en blanco por defecto */
+}
+
+a {
+    color:#7fa771
+}
+
+h2, h3, p, li {
+    text-align: center;
+    margin: 20px 10px;
+    font-size: 4vw; /* Tamaño de fuente grande para legibilidad en móviles */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 10px;
+    font-size: 4.5vw; /* Tamaño de fuente grande para legibilidad en móviles */
+}
+
+p, li {
+    text-align: justify;
+    width: 90%; /* Adaptado para móviles */
+    margin: 10px auto;
+}
+
+.section, .survey-questions, .dataframe.criteria-table {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 10px auto;
+    border-radius: 10px;
+    width: 90%; /* Ancho ajustado para móviles */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black; /* Texto en negro para contraste */
+}
+
+.submit-button {
+    background-color: #7fa771ed; /* Color verde especificado por defecto */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1vw; /* Tamaño de fuente basado en el ancho de la ventana */
+    display: block; /* Importante para centrar */
+    width: 50%; /* Ancho relativo para mantenerlo proporcional */
+    margin: 70px auto; /* Auto para centrar horizontalmente, margen superior personalizado */
+    text-align: center; /* Asegurar que el texto dentro del botón esté centrado */
+}
+
+.submit-button:hover {
+    background-color: #bd7cb5ec; /* Cambio de color al pasar el ratón */
+}
+
+/* Media queries para Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5vw; /* Ajuste de tamaño de fuente para desktop */
+    }
+
+    h2, h3 {
+        font-size: 3vw; /* Ajuste de tamaño de fuente para desktop */
+    }
+
+    h3 {
+        font-size: 2.5vw; /* Ajuste de tamaño de fuente para desktop */
+    }
+
+    p, li{
+        font-size: 2 vw; 
+    }
+    p, li {
+        width: 70%; /* Ancho ajustado para desktop */
+    }
+    p, li {
+        width: 80%; /* Ancho ajustado para tablet */
+    }
+
+    .section, .survey-questions, .dataframe.criteria-table {
+        width: 80%; /* Ancho ajustado para tablet */
+        padding: 20px;
+    }
+
+    .submit-button {
+        font-size: 1.5vw;
+        padding: 15px 30px;
+        width: 30%; /* Ancho reducido para tabletas */
+    }
+}
+
+/* Media queries para Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+
+    h1 {
+        font-size: 3vw; /* Ajuste de tamaño de fuente para desktop */
+    }
+
+    h2, h3 {
+        font-size: 2.5vw; /* Ajuste de tamaño de fuente para desktop */
+    }
+
+    h3 {
+        font-size: 2vw; /* Ajuste de tamaño de fuente para desktop */
+    }
+
+    p, li{
+        font-size: 1.5vw; 
+    }
+    p, li {
+        width: 70%; /* Ancho ajustado para desktop */
+    }
+
+    .section, .survey-questions, .dataframe.criteria-table {
+        width: 70%; /* Ancho ajustado para desktop */
+    }
+
+    .submit-button {
+        font-size: 1.2vw;
+        padding: 18px 36px;
+        width: 20%; /* Ancho reducido para desktops */
+    }
+}
