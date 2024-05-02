@@ -1,0 +1,20 @@
+<script>
+    document.getElementById('surveyA2').addEventListener('submit', function(e) {
+        e.preventDefault();  // Evita que el formulario se envíe de la manera tradicional
+    
+        var formData = new FormData(document.getElementById('surveyA2'));
+    
+        fetch('https://script.google.com/macros/s/AKfycbznEPBbp6vdJJvN21dyEGMbNGL534fAJOxu-tyEXJR3oM05weWuXm6O7bsyGq9FNjQLDg/exec', {
+            method: 'POST',
+            body: new FormData(document.getElementById('surveyA2')),
+            mode: 'no-cors' // Esto puede ser necesario para evitar problemas de CORS
+        })
+        .then(response => {
+            console.log('Datos enviados con éxito');
+            alert('Formulario enviado con éxito');  // Notificación al usuario
+        })
+        .catch(error => console.error('Error:', error));
+    });
+    </script>
+
+

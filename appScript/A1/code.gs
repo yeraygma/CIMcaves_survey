@@ -1,0 +1,57 @@
+function doGet(e) {
+  return HtmlService.createTemplateFromFile('form')
+    .evaluate()
+    .setTitle('CIMcave surveyA1') 
+    .setSandboxMode(HtmlService.SandboxMode.IFRAME);
+}
+
+
+// En Code.gs
+function include(filename) {
+  return HtmlService.createHtmlOutputFromFile(filename)
+    .getContent();
+}
+
+
+function doPost(e) {
+    if (!e || !e.parameter) {
+        Logger.log("No se recibieron datos");
+        return HtmlService.createHtmlOutput("No se recibieron datos");
+    }
+    
+    var ss = SpreadsheetApp.openById("1m2yxPvsJ6PVUn0vau0r0xdwSXM4B1DkRt2fatuhaO44");
+    var hoja = ss.getSheetByName("surveyA1");
+    var datos = [];
+
+    // Campos básicos
+    const fields = ['name', 'middle_name', 'surname', 'email', 'organization', 'organization_type', 'position', 'country'];
+    fields.forEach(field => datos.push(e.parameter[field] || ""));
+
+    // Campos de encuestas dinámicos
+    const numQuestions = 12; // Número de preguntas en el formulario
+    for (let i = 1; i <= numQuestions; i++) {
+        datos.push(e.parameter[`c${i}_pressure_distance`] || "");
+        datos.push(e.parameter[`c${i}_frequency`] || "");
+        datos.push(e.parameter[`c${i}_functional_impact`] || "");
+        datos.push(e.parameter[`c${i}_resistance`] || "");
+        datos.push(e.parameter[`c${i}_recovery_time`] || "");
+        datos.push(e.parameter[`c${i}_certainty`] || "");
+        datos.push(e.parameter[`c${i}_local_knwoledge`] || "");
+    }
+
+     // Añadir c26 y c27 específicamente
+    const additionalQuestions = [26, 27];
+    additionalQuestions.forEach(i => {
+        datos.push(e.parameter[`c${i}_pressure_distance`] || "");
+        datos.push(e.parameter[`c${i}_frequency`] || "");
+        datos.push(e.parameter[`c${i}_functional_impact`] || "");
+        datos.push(e.parameter[`c${i}_resistance`] || "");
+        datos.push(e.parameter[`c${i}_recovery_time`] || "");
+        datos.push(e.parameter[`c${i}_certainty`] || "");
+        datos.push(e.parameter[`c${i}_local_knowledge`] || "");
+    });
+
+    hoja.appendRow(datos);
+    
+    return HtmlService.createHtmlOutput("¡Formulario enviado con éxito!");
+}

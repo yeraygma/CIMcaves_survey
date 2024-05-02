@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey form H2</title>
+
+<link rel="stylesheet" href="style.css"> <!--QUITAR CUANDO EL ARCHIVO DE GUARDE COMO  html para APP SCRIPT-->
+<!--<?!= include('style'); ?>-->  <!--ACTIVAR CUANDO SE GUARDE COMO html PARA APP SCRIPT-->
+
+<!--Javascript para manejar el mensaje de agradecimiento-->
+<script>
+    function handleSubmit(event) {
+        event.preventDefault(); // Previene la recarga de la página
+        const form = document.getElementById('surveyH2');
+        form.style.display = 'none'; // Oculta el formulario
+        const thanksMessage = document.getElementById('thanksMessage');
+        thanksMessage.style.display = 'block'; // Muestra el mensaje de agradecimiento
+    }
+    </script>
+
+
+</head>
+<body>
+    <form id="surveyH2">
+      <h1>Survey of Cumulative Impact for sea caves in the Canary Islands, CIMcaves </h1>
+      <h1> Version H2 </h1>
+      <div class="section personal-info">
+        <h2>Personal Information</h2>
+        <div class="info-row">
+            <div class="info">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="info">
+              <label for="middle-name">Middle Name:</label>
+              <input type="text" id="middle-name" name="middle_name">
+            </div>
+            <div class="info">
+              <label for="surname">Surname:</label>
+              <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="info">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+        
+          <div class="info-row">
+            <div class="info">
+              <label for="organization">Organization:</label>
+              <input type="text" id="organization" name="organization" required>
+            </div>
+            <div class="info">
+              <label for="organization-type">Organization type:</label>
+              <select id="organization-type" name="organization_type">
+                <option value="academic institution">Academic institution</option>
+                <option value="government agency">Government agency</option>
+                <option value="private company">Private company</option>
+                <option value="ngo">NGO</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+        
+          <div class="info-row">
+            <div class="info">
+              <label for="position">Position:</label>
+              <input type="text" id="position" name="position" required>
+            </div>
+            <div class="info">
+              <label for="country">Country:</label>
+              <input type="text" id="country" name="country" required>
+            </div>
+          </div>
+        </div>
+      <div class="section survey-questions">
+        <h2>Survey Questions</h2>
+        <div class="questions-container">
+          <!-- 1 Example question -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Commercial fishing</h3>
+            <p>  <span class="normal-text">Interpretation: </span>Vulnerability to commercial fishing by artisanal fleet. Gear includes large metal traps 
+                for demersal fish, small purse seine nets for pelagic species, and other gear such as trammel nets, bottom 
+                longlines and handline fishing.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+               
+          <!-- 2 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Spearfishing</h3>
+            <p>   <span class="normal-text">Interpretation: </span>Vulnerability to spearfishing. </p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!-- 3 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Antropogenic noise. Fishfarms</h3>
+            <p >  <span class="normal-text">Interpretation: </span>Vulnerability to anthropogenic noise caused by fish farms.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!--  4 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Sealing</h3>
+            <p >   <span class="normal-text">Interpretation: </span>Vulnerability to alteration of the structure and composition of marine substrates due to 
+                human activities that compact the bottom, such as coastal constructions.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!-- 5 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Diving</h3>
+            <p >  <span class="normal-text">Interpretation: </span>Vulnerability to cavern and cave diving.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!-- 6 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Waste warter discharge. Industrial outfalls.</h3>
+            <p >  <span class="normal-text">Interpretation: </span>Vulnerability to wastewater discharge from small industry drainage such as fish 
+                and algae farming on land, treated oily waters, hydrocarbon separators in airports, etc.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!-- 7 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Waste water discharge. Nutrient outfalls.</h3>
+            <p >   <span class="normal-text">Interpretation: </span>Vulnerability to nutrient wastewater discharge from industry as cement factory.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!-- 8 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Waste water discharge. Cooling waters outfalls.</h3>
+            <p >  <span class="normal-text">Interpretation: </span>Vulnerability to cooling water discharge from cooling systems of thermal power plants, 
+                combined cycle plants, and others.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!-- 9 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Brine discharge. Desalination plants outfalls.</h3>
+            <p >  <span class="normal-text">Interpretation: </span>Vulnerability to brine water from desalination plants.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!-- 10 Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Waste water discharge. Urban seawage outfalls.</h3>
+            <p >  <span class="normal-text">Interpretation: </span>Vulnerability to urban wastewater discharge from seawage treatment stations.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+          <!--11  Repeat structure for other 9 questions -->
+          <div class="question">
+            <h3 style="margin-bottom: 0;">Vessel density</h3>
+            <p>   <span class="normal-text">Interpretation: </span>Vulnerability to vessels-induced stressors
+               including input of microbial pathogenic organisms, organic matter, other substances (synthetic and no 
+               synthetic), waste (solid waste including micro waste) and noise.</p>
+            <p>
+            </p>
+                <div class="answers">
+                    <div class="dropdown-label">
+                      <span>Pressure distance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>1 km</option>
+                        <option>5 km</option>
+                        <option>10 km</option>
+                        <option>≥ 50 km</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Frequency</span>
+                      <select>
+                        <option>never occurs</option>
+                        <option>rare</option>
+                        <option>occasional</option>
+                        <option>annual or regular</option>
+                        <option>persistent</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Functional impact</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>species</option>
+                        <option>single trophic level</option>
+                        <option>> 1 trophic level</option>
+                        <option>entire community</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Resistance</span>
+                      <select>
+                        <option>no impact</option>
+                        <option>high</option>
+                        <option>medium</option>
+                        <option>low</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Recovery time (years)</span>
+                      <select>
+                        <option>< 1</option>
+                        <option>1 - 10</option>
+                        <option>10 - 100</option>
+                        <option>> 100</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Certainty</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                        <option>very high</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-label">
+                      <span>Stressor's local knowledge</span>
+                      <select>
+                        <option>none</option>
+                        <option>low</option>
+                        <option>medium</option>
+                        <option>high</option>
+                      </select>
+                    </div>
+                  </div>
+        </div>
+      </div>
+      <!--<input type="submit" value="Submit Survey"> -->
+      <button type="submit" class="submit-button">Submit survey</button>
+    </form>
+    <div id="thanksMessage" style="display:none;">
+        <h1>Thank you very much for collaborating</h1>
+      </div>
+  </body>
+  </html>
