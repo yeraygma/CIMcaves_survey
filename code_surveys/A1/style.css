@@ -23,11 +23,11 @@
     }
     
     h2 {
-        font-size: 3.5vw; /* Tamaño de fuente ajustado para dispositivos móviles */
+        font-size: 4.5vw; /* Tamaño de fuente ajustado para dispositivos móviles */
     }
     
     h3 {
-        font-size: 3vw; /* Tamaño de fuente ajustado para dispositivos móviles */
+        font-size: 4vw; /* Tamaño de fuente ajustado para dispositivos móviles */
     }
     
     .normal-text {
@@ -58,13 +58,15 @@
     }
     
     .question h4 {
-        font-size: 2vw; /* Tamaño de fuente ajustado para dispositivos móviles */
+        font-size: 4vw; /* Tamaño de fuente ajustado para dispositivos móviles */
+        margin-top: -4%;
     }
     
     .question p {
-        font-style: italic;
-        font-size: 2.5vw; /* Tamaño de fuente ajustado para dispositivos móviles */
+
+        font-size: 3.5vw; /* Tamaño de fuente ajustado para dispositivos móviles */
         margin: 5px 0 20px; /* Espaciado alrededor del párrafo de la pregunta */
+        margin-top: 4%;
     }
     
     .answers {
@@ -145,7 +147,6 @@
         }
         .question p {
             font-size: 1.5vw; /* Tamaño de fuente ajustado */
-            font-style: italic; 
             margin-top: 2%;
         }
 

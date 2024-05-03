@@ -1,8 +1,12 @@
 function doGet(e) {
-  return HtmlService.createTemplateFromFile('form')
-    .evaluate()
-    .setTitle('CIMcave surveyA1') 
-    .setSandboxMode(HtmlService.SandboxMode.IFRAME);
+    var output = HtmlService.createTemplateFromFile('form')
+        .evaluate()
+        .setTitle('CIMcave surveyH1')
+        .setSandboxMode(HtmlService.SandboxMode.IFRAME);
+
+    output.addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    
+    return output;
 }
 
 
@@ -36,7 +40,7 @@ function doPost(e) {
         datos.push(e.parameter[`c${i}_resistance`] || "");
         datos.push(e.parameter[`c${i}_recovery_time`] || "");
         datos.push(e.parameter[`c${i}_certainty`] || "");
-        datos.push(e.parameter[`c${i}_local_knwoledge`] || "");
+        datos.push(e.parameter[`c${i}_local_knowledge`] || "");
     }
 
      // Añadir c26 y c27 específicamente
@@ -53,5 +57,5 @@ function doPost(e) {
 
     hoja.appendRow(datos);
     
-    return HtmlService.createHtmlOutput("¡Formulario enviado con éxito!");
+    return HtmlService.createHtmlOutput("Form submitted successfully. Thanks for helping!");
 }

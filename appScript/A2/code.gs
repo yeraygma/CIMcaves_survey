@@ -1,10 +1,13 @@
 function doGet(e) {
-  return HtmlService.createTemplateFromFile('form')
-    .evaluate()
-    .setTitle('CIMcave surveyA2') 
-    .setSandboxMode(HtmlService.SandboxMode.IFRAME);
-}
+    var output = HtmlService.createTemplateFromFile('form')
+        .evaluate()
+        .setTitle('CIMcave surveyH1')
+        .setSandboxMode(HtmlService.SandboxMode.IFRAME);
 
+    output.addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    
+    return output;
+}
 
 // En Code.gs
 function include(filename) {
@@ -42,5 +45,5 @@ function doPost(e) {
 
     hoja.appendRow(datos);
     
-    return HtmlService.createHtmlOutput("¡Formulario enviado con éxito!");
+    return HtmlService.createHtmlOutput("Form submitted successfully. Thanks for helping!");
 }

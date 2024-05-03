@@ -1,9 +1,14 @@
 function doGet(e) {
-  return HtmlService.createTemplateFromFile('form')
-    .evaluate()
-    .setTitle('CIMcave surveyH2') 
-    .setSandboxMode(HtmlService.SandboxMode.IFRAME);
+    var output = HtmlService.createTemplateFromFile('form')
+        .evaluate()
+        .setTitle('CIMcave surveyH1')
+        .setSandboxMode(HtmlService.SandboxMode.IFRAME);
+
+    output.addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    
+    return output;
 }
+
 
 
 // En Code.gs

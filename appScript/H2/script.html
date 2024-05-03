@@ -4,17 +4,17 @@
     
         var formData = new FormData(document.getElementById('surveyH2'));
     
-        fetch('https://script.google.com/macros/s/AKfycbwZ31F10sjnP1pAX2qHxmzjxs9mKER6wJnN29s2BisQIGBdjR41mYUoZ-s5Uc1jfLhK/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwGLW1_RbJ_wTZMg2oySSckj8hp5Mi7gS4viI2pGrAP4FJbM1TmKxQfT0dtTOCTEYfp/exec', {
             method: 'POST',
             body: new FormData(document.getElementById('surveyH2')),
             mode: 'no-cors' // Esto puede ser necesario para evitar problemas de CORS
         })
         .then(response => {
             console.log('Datos enviados con éxito');
-            alert('Formulario enviado con éxito');  // Notificación al usuario
+            alert('Form submitted successfully. Thanks for helping!');  // Notificación al usuario
         })
         .catch(error => console.error('Error:', error));
     });
-    </script>
+</script>
 
 

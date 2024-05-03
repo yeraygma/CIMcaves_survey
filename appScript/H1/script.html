@@ -4,17 +4,18 @@
     
         var formData = new FormData(document.getElementById('surveyH1'));
     
-        fetch('https://script.google.com/macros/s/AKfycbz5bVwl-OVgodwSfPgRm-9v3OmuIhUuH-bofzi7Mn_YOw5D3pzVXHVJ0X2434FK7L8/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbykbaTSIZKZCqG68DJ5UFrOanCm73elRkt-QTwraka2oRYwgu2P0CrbquFUZiCzlZJ2Mw/exec', {
             method: 'POST',
             body: new FormData(document.getElementById('surveyH1')),
             mode: 'no-cors' // Esto puede ser necesario para evitar problemas de CORS
         })
         .then(response => {
             console.log('Datos enviados con éxito');
-            alert('Formulario enviado con éxito');  // Notificación al usuario
+            alert('Form submitted successfully. Thanks for helping!');  // Notificación al usuario
         })
         .catch(error => console.error('Error:', error));
     });
-    </script>
+
+</script>
 
 
