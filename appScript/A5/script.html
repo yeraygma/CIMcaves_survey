@@ -1,12 +1,12 @@
 <script>
-    document.getElementById('surveyH2').addEventListener('submit', function(e) {
+    document.getElementById('surveyA5').addEventListener('submit', function(e) {
         e.preventDefault();  // Evita que el formulario se envíe de la manera tradicional
     
-        var formData = new FormData(document.getElementById('surveyH2'));
+        var formData = new FormData(document.getElementById('surveyA5'));
     
-        fetch('https://script.google.com/macros/s/AKfycby2HbEvoHkDmFywwyjUfEOgmgz2qUEDbnZxhMby7689WKj-U5k3FayEpCzhO2WZGwlM/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbyW5hHTNYWa1kVYXH6Olwk3G8KuTS8q3kO7Owk4ECaXPjg9X98XLj0ieN9lk52cr8Wjrw/exec', {
             method: 'POST',
-            body: new FormData(document.getElementById('surveyH2')),
+            body: new FormData(document.getElementById('surveyA5')),
             mode: 'no-cors' // Esto puede ser necesario para evitar problemas de CORS
         })
         .then(response => {
@@ -15,6 +15,6 @@
         })
         .catch(error => console.error('Error:', error));
     });
-</script>
+    </script>
 
 
