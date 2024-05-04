@@ -215,7 +215,7 @@ li a {
     nav img {
         height: 50px;
         order: 1; /* Posiciona la imagen a la izquierda */
-        margin-left: 65px; /* Espacio desde el lado izquierdo */
+        margin-left: 50px; /* Espacio desde el lado izquierdo */
   
     }
 
