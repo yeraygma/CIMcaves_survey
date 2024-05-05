@@ -166,6 +166,10 @@ li a {
 }
 
 @media (max-width: 768px) {
+
+    .main-header {
+        margin-top: -10%;
+     }
     .menu-button {
         display: block;
         margin-left: 0;  /* Coloca el botón a la derecha */
@@ -221,6 +225,7 @@ li a {
 
     h1{
         font-size: 7vw;
+    
     }
 
 
